@@ -1,6 +1,5 @@
 "use client"
 import { Helmet } from 'react-helmet';
-import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import HeroA from "../../components/Hero/HeroA.jsx";
 import CountriesScreenings from "../../components/Countries&Screenings/CountriesScreenings.jsx";

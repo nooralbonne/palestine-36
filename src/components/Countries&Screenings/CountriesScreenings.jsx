@@ -1,8 +1,6 @@
 'use client';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import './CountriesScreenings.css';
-
-
 
 
 /* ===== REAL CINEMA DATA ===== */
