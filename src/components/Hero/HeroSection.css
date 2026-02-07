@@ -1,0 +1,283 @@
+/* ===== HERO VIDEO SECTION ===== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+/* ---------- Video wrapper ---------- */
+
+.hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* ---------- Dark overlay gradient ---------- */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    #0a0a0a 0%,
+    rgba(10, 10, 10, 0.85) 20%,
+    rgba(10, 10, 10, 0.4) 45%,
+    rgba(10, 10, 10, 0.15) 65%,
+    rgba(10, 10, 10, 0.5) 100%
+  );
+}
+
+/* ---------- Video controls (bottom-right) ---------- */
+
+.hero-controls {
+  position: absolute;
+  bottom: 80px;
+  right: 64px;
+  z-index: 3;
+  display: flex;
+  gap: 12px;
+}
+
+.control-btn {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  padding: 0;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.control-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+}
+
+/* ---------- Content (bottom-left) ---------- */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 64px 80px;
+  max-width: 720px;
+}
+
+.hero-logo {
+  width: 380px;
+  max-width: 90vw;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(180, 40, 40, 0.2);
+  border: 1px solid rgba(180, 40, 40, 0.5);
+  color: #e8b4b4;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  margin-bottom: 18px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero-synopsis {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #c0c0c0;
+  margin-bottom: 32px;
+  max-width: 560px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #b42828;
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.btn-primary:hover {
+  background: #d63333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(180, 40, 40, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 10px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  display: inline-block;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 900px) {
+  .hero-content {
+    padding: 0 32px 80px;
+  }
+
+  .hero-controls {
+    right: 32px;
+  }
+
+  .hero-logo {
+    width: 300px;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Video becomes a 16:9 box at the top */
+  .hero-video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+  }
+
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 0.6) 0%,
+      rgba(10, 10, 10, 0.1) 40%,
+      rgba(10, 10, 10, 0.35) 100%
+    );
+  }
+
+  /* Controls sit inside the video box */
+  .hero-controls {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .control-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .control-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Content stacks below the video */
+  .hero-content {
+    padding: 28px 20px 40px;
+  }
+
+  .hero-logo {
+    width: 240px;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+  }
+
+  .hero-synopsis {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 20px;
+    font-size: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}

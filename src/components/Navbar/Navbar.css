@@ -137,3 +137,24 @@
   padding-left: 12px;
   border-bottom-color: rgba(180, 40, 40, 0.4);
 }
+
+@media (max-width: 900px) {
+  .nav1 {
+    padding: 16px 24px;
+  }
+
+  .nav1-cta {
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+
+  .nav1-menu {
+    width: 320px;
+    padding: 40px 24px;
+  }
+
+  .nav1-menu-link {
+    font-size: 28px;
+    padding: 10px 0;
+  }
+}

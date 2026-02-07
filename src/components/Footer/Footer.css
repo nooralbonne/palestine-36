@@ -44,29 +44,6 @@
   );
 }
 
-.footerB-title {
-  font-size: 32px;
-  font-weight: 300;
-  color: #e5e5e5;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  margin: 0;
-  white-space: nowrap;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* Tagline */
-.footerB-tagline {
-  font-size: 14px;
-  color: #666;
-  letter-spacing: 0.5px;
-  margin: 16px auto 0 auto;
-  max-width: 460px;
-  line-height: 1.6;
-  padding: 0 24px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
 /* Social */
 .footerB-social {
   display: flex;

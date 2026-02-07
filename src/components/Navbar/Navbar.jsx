@@ -26,7 +26,7 @@ export default function NavbarOne() {
           <span />
         </button>
 
-        <button className="nav1-cta">Find a Cinema</button>
+        <a href="/#screenings" className="nav1-cta" onClick={() => setOpen(false)}>Find a Cinema</a>
       </header>
 
       <div

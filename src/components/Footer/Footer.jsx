@@ -58,16 +58,6 @@ export default function FooterB() {
     <footer className="footerB">
       <div className="footerB-top-line" />
 
-      {/* Centered brand strip */}
-      <div className="footerB-center">
-        <div className="footerB-rule-left" />
-        <h2 className="footerB-title">Palestine 36</h2>
-        <div className="footerB-rule-right" />
-      </div>
-
-      {/* Tagline */}
-      <p className="footerB-tagline">A cinematic journey through the untold history of 1936 Palestine</p>
-
       {/* Social row */}
       <div className="footerB-social">
         {socialLinks.map((s) => (
@@ -87,15 +77,15 @@ export default function FooterB() {
 
       {/* Nav row */}
       <nav className="footerB-nav" aria-label="Footer navigation">
-        <a href="#synopsis" className="footerB-nav-link">Story</a>
+        <a href="/" className="footerB-nav-link">Home</a>
         <span className="footerB-dot" aria-hidden="true" />
-        <a href="#cast" className="footerB-nav-link">Cast & Crew</a>
-        <span className="footerB-dot" aria-hidden="true" />
-        <a href="#gallery" className="footerB-nav-link">Gallery</a>
+        <a href="#the-film" className="footerB-nav-link">The Film</a>
         <span className="footerB-dot" aria-hidden="true" />
         <a href="#screenings" className="footerB-nav-link">Screenings</a>
         <span className="footerB-dot" aria-hidden="true" />
-        <a href="#press" className="footerB-nav-link">Press</a>
+        <a href="#awards" className="footerB-nav-link">Awards</a>
+        <span className="footerB-dot" aria-hidden="true" />
+        <a href="#watch-trailer" className="footerB-nav-link">Watch Trailer</a>
       </nav>
 
       {/* Bottom */}

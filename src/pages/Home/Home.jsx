@@ -1,7 +1,7 @@
 "use client"
 import { Helmet } from 'react-helmet';
 import Navbar from "../../components/Navbar/Navbar.jsx";
-import HeroA from "../../components/Hero/HeroA.jsx";
+import HeroA from "../../components/Hero/HeroSection.jsx";
 import CountriesScreenings from "../../components/Countries&Screenings/CountriesScreenings.jsx";
 import AwardsMarquee from "../../components/AwardsMarquee/AwardsMarquee.jsx";
 import CallToAction from "../../components/CallToAction/CallToAction.jsx";
