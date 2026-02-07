@@ -94,8 +94,8 @@ export default function FooterB() {
           &copy; {new Date().getFullYear()} Palestine 36 Film. All rights reserved.
         </span>
         <div className="footerB-legal">
-          <a href="#" className="footerB-legal-link">Privacy</a>
-          <a href="#" className="footerB-legal-link">Terms</a>
+          <a href="/" className="footerB-legal-link">Privacy</a>
+          <a href="/" className="footerB-legal-link">Terms</a>
         </div>
       </div>
     </footer>
