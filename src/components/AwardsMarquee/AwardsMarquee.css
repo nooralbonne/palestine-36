@@ -1,0 +1,151 @@
+/* ===== AWARDS MARQUEE SECTION ===== */
+.awards-section {
+  background: #0a0a0a;
+  padding: 72px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.awards-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 48px;
+}
+
+.awards-eyebrow {
+  display: inline-block;
+  color: #b42828;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.awards-title {
+  font-size: 42px;
+  font-weight: 300;
+  color: #e5e5e5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+}
+
+/* ===== MARQUEE ===== */
+.awards-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0 56px 0;
+}
+
+.awards-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: awards-scroll 40s linear infinite;
+}
+
+.awards-marquee-slide {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.awards-img {
+  height: 360px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* ===== FADE EDGES ===== */
+.awards-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.awards-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a 0%, transparent 100%);
+}
+
+.awards-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a 0%, transparent 100%);
+}
+
+/* ===== BOTTOM LINE ===== */
+.awards-bottom-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(180, 40, 40, 0.3),
+    transparent
+  );
+}
+
+/* ===== ANIMATION ===== */
+@keyframes awards-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .awards-header {
+    padding: 0 24px;
+  }
+
+  .awards-title {
+    font-size: 28px;
+  }
+
+  .awards-img {
+    height: 200px;
+  }
+
+  .awards-fade {
+    width: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-section {
+    padding: 48px 0 0 0;
+  }
+
+  .awards-header {
+    margin-bottom: 32px;
+  }
+
+  .awards-marquee-wrapper {
+    padding: 24px 0 40px 0;
+  }
+
+  .awards-img {
+    height: 150px;
+  }
+
+  .awards-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .awards-fade {
+    width: 32px;
+  }
+}
